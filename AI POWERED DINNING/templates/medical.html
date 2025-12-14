@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Medical Conditions</title>
+</head>
+<body>
+    <header>
+        <h1>Food Mood Finder</h1>
+    </header>
+    <div class="container">
+        <h2>You are feeling {{ mood }}</h2>
+        <h3>Do you have any medical conditions?</h3>
+        <form action="/recommendation" method="post">
+            <input type="hidden" name="mood" value="{{ mood }}">
+            {% for allergy in allergies %}
+                <input type="hidden" name="allergies" value="{{ allergy }}">
+            {% endfor %}
+            <select name="medical_condition">
+                <option value="none">None</option>
+                <option value="diabetes">Diabetes</option>
+            </select>
+            <h3>Are you vegetarian?</h3>
+            <select name="preference">
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non_vegetarian">Non-Vegetarian</option>
+            </select>
+            <button type="submit">Get Recommendation</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Food Mood Finder</p>
+    </footer>
+</body>
+</html>

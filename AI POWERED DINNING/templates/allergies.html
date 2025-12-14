@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Allergy Information</title>
+</head>
+<body>
+    <header>
+        <h1>Food Mood Finder</h1>
+    </header>
+    <div class="container">
+        <h2>You are feeling {{ mood }}</h2>
+        <h3>Do you have any allergies?</h3>
+        <form action="/medical" method="post">
+            <input type="hidden" name="mood" value="{{ mood }}">
+            <label><input type="checkbox" name="allergies" value="nuts"> Nuts</label><br>
+            <label><input type="checkbox" name="allergies" value="dairy"> Dairy</label><br>
+            <label><input type="checkbox" name="allergies" value="gluten"> Gluten</label><br>
+            <label><input type="checkbox" name="allergies" value="seafood"> Seafood</label><br>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Food Mood Finder</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Food Recommendation</title>
+</head>
+<body>
+    <header>
+        <h1>Food Mood Finder</h1>
+    </header>
+    <div class="container">
+        <h2>We have a recommendation for you!</h2>
+        <p>Since you are feeling <strong>{{ mood }}</strong>, we suggest you try:</p>
+        <h3>{{ food_suggestion }}</h3>
+        <a href="/">Start Again</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Food Mood Finder</p>
+    </footer>
+</body>
+</html>
